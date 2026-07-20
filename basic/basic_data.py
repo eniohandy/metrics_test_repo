@@ -5,10 +5,11 @@ import json
 ollama_server = os.environ['OLLAMA_SERVER']
 
 print (ollama_server)
+host=f'http://{ollama_server}:11434/api/show'
 
 # OLLAMA_URL = "http://{ollama_server}:11434/api/show"  
 ### response = requests.post(OLLAMA_URL, json={"model": "llama3.1:latest"})  
-response = requests.post("http://{ollama_server}:11434/api/show", json={"model": "llama3.1:latest"})  
+response = requests.post(host, json={"model": "llama3.1:latest"})  
 # print(response.json())
 data = response.json()
 
