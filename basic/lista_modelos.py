@@ -1,5 +1,5 @@
 ### query direta ao ollama para obter os modelos disponiveis ###
-### versão controlada pelo github ###
+
 import requests
 import json
 

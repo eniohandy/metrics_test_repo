@@ -1,6 +1,7 @@
 from ollama import Client 
 
 client = Client(host='http://200.144.192.87:11434')
+#client = Client(host='http://$OLLAMA_SERVER:11434')
 
 
 messages = [
