@@ -1,0 +1,7 @@
+curl http://200.144.192.87:11434/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "llama3.1",
+    "messages": [{"role": "user", "content": "Why is the sky blue?"}],
+    "stream": false
+  }' | jq -r '.message.content'
