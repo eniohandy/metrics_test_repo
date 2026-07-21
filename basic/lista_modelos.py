@@ -1,11 +1,12 @@
 ### query direta ao ollama para obter os modelos disponiveis ###
-
+import os
 import requests
 import json
 
-OLLAMA_URL = "http://200.144.192.87:11434/api/tags"  # troque localhost pelo IP do servidor se rodar remotamente
+ollama_server = os.environ['OLLAMA_SERVER']
+host=f'http://{ollama_server}:11434/api/tags'
 
-response = requests.get(OLLAMA_URL)
+response = requests.get(host)
 response.raise_for_status()
 data = response.json()
 
