@@ -16,10 +16,14 @@ from ragas.llms import llm_factory
 ## ContextPrecision está em ragas.metrics.collections e não em ragas.metrics
 from ragas.metrics.collections import ContextRecall
 #
+# ocultar o servidor
+ollama_server = os.environ['OLLAMA_SERVER']
+host=f'http://{ollama_server}:11434/v1'
+#
 ## Setup LLM - aqui será o ajuste para Ollama models
 client = AsyncOpenAI(
     api_key="ollama",
-    base_url="http://200.144.192.87:11434/v1"
+    base_url=host
 )
 #
 llm = llm_factory("nemotron-3-nano:30b", provider="openai", client=client)
