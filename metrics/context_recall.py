@@ -38,11 +38,18 @@ print ("___ Scorer___")
 #### caso afirmativo, a pontuação é total (1.0). Do contrário, uma fração.
 input = "o que é um cartão de crédito?"
 reference = "é um instrumento de crédito pessoal. existem nas bandeiras visa e master."
+### no caso abaixo, todos os claims da reference estão no retrieved. Assim a resposta é 1.
+#retrieved = ["os bancos emitem para seus clientes", 
+#            "esta é só uma frase para ver se o resultado muda.",
+#            "é um instrumento de crédito pessoal",
+#            "existem nas bandeiras visa e master"
+#]
+### no caso abaixo, apenas 1 dos 2 claims da reference está no retrived. Assim, a resposta é 0,5
 retrieved = ["os bancos emitem para seus clientes", 
             "esta é só uma frase para ver se o resultado muda.",
             "é um instrumento de crédito pessoal",
-            "existem nas bandeiras visa e master"
 ]
+
 
 print (" ") 
 print ("input: ", input)

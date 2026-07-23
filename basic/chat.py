@@ -17,5 +17,11 @@ messages = [
   },
 ]
 
-response = client.chat('gpt-oss', messages=messages)
+# response = client.chat('gpt-oss', messages=messages)
+response = client.chat('cogito', messages=messages,
+                      options={
+                         'temperature':0,
+                         'seed': 10,
+                      }
+)
 print(response['message']['content'])

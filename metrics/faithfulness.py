@@ -37,11 +37,11 @@ print ("___ Scorer___")
 #### A ordem importa. Então, como a terceira frase é igual a reference, o score é 0,333.
 input = "o que é um cartão de crédito?"
 response = "é um instrumento de crédito pessoal"
-retrieved = ["é um instrumento de crédito pessoal",] 
-#retrieved = ["os bancos emitem para seus clientes", 
-#           "esta é só uma frase para ver se o resultado muda.",
-#           "é um instrumento de crédito pessoal",
-#]
+# retrieved = ["cartão de crédito é um instrumento de crédito pessoal",] 
+retrieved = ["os bancos emitem para seus clientes", 
+           "esta é só uma frase para ver se o resultado muda.",
+           "cartões de crédito são um instrumento de crédito pessoal",
+]
 
 print (" ") 
 print ("input: ", input)
