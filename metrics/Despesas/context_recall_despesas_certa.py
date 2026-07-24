@@ -40,8 +40,8 @@ print ("___ Scorer___")
 #### Neste caso, ContextRecall, são comparados os claims da "reference", separados pela LLM
 #### com os claims contidos no "retrieved". O que conta é se cada claim reference aparece no retrieved.
 #### caso afirmativo, a pontuação é total (1.0). Do contrário, uma fração.
-input = "o que é um cartão de crédito?"
-reference = "é um instrumento de crédito pessoal. existem nas bandeiras visa e master."
+#input = "o que é um cartão de crédito?"
+#reference = "é um instrumento de crédito pessoal. existem nas bandeiras visa e master."
 ### no caso abaixo, todos os claims da reference estão no retrieved. Assim a resposta é 1.
 #retrieved = ["os bancos emitem para seus clientes", 
 #            "esta é só uma frase para ver se o resultado muda.",
@@ -53,15 +53,23 @@ reference = "é um instrumento de crédito pessoal. existem nas bandeiras visa e
 #            "esta é só uma frase para ver se o resultado muda.",
 #            "é um instrumento de crédito pessoal",
 #]
+#input = "quanto gastei na padaria, lavanderia e restaurante??"
+#reference = "padaria R$ 100, lavanderia R$ 50,  restaurante R$ 120"
+#retrieved = ["padaria gastou 100 reais",
+#            "lavanderia gastou R$ 50", 
+#            "restaurante gastou R$ 120.",
+#            "academia gastou R$ 200.",
+#            "loja gastou R$ 500.",
+#]
 input = "quanto gastei na padaria, lavanderia e restaurante??"
-reference = "padaria R$ 100, lavanderia R$ 50,  restaurante R$ 120"
-retrieved = ["padaria gastou 100 reais",
+reference = "padaria R$ 100, lavanderia R$ 50,  restaurante R$ 120, cinema R$ 40"
+retrieved = ["supermercado gastou R$250",
+            "padaria gastou 100 reais",
             "lavanderia gastou R$ 50", 
             "restaurante gastou R$ 120.",
             "academia gastou R$ 200.",
             "loja gastou R$ 500.",
 ]
-
 print (" ") 
 print ("input: ", input)
 print ("reference: ", reference)

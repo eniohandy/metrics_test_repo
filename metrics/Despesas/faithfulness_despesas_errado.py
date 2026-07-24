@@ -39,8 +39,9 @@ print ("___ Scorer___")
 #### Neste caso, o que é comparado são as tres frases "retrieved" contra a "reference" 
 #### A ordem importa. Então, como a terceira frase é igual a reference, o score é 0,333.
 input = "quanto gastei na padaria, lavanderia e restaurante??"
-reference = "padaria R$ 100, lavanderia R$ 50,  restaurante R$ 120"
-retrieved = ["padaria gastou 100 reais",
+reference = "padaria R$ 100, lavanderia R$ 50,  restaurante R$ 120, cinema R$ 40"
+retrieved = ["supermercado gastou R$250",
+            "padaria gastou 100 reais",
             "lavanderia gastou R$ 50", 
             "restaurante gastou R$ 120.",
             "academia gastou R$ 200.",
