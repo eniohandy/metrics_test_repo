@@ -40,8 +40,11 @@ embeddings = embedding_factory(
 )
 
 ### llm = llm_factory("llama3.1", provider="openai", client=client)
-### llm = llm_factory("nemotron-3-nano:30b", provider="openai", client=client)
-llm = llm_factory("deepseek-r1", provider="openai", client=client)
+### funcionou o nemotron e o cogito.
+llm = llm_factory("nemotron-3-nano:30b", provider="openai", client=client)
+
+### llm = llm_factory("deepseek-r1", provider="openai", client=client) ### não funcionou
+### llm = llm_factory("qwen3.6:27b", provider="openai", client=client) ### não funcionou
 
 # Create evaluation dataset
 #data = {
