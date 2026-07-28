@@ -1,4 +1,3 @@
-print ("*** CARREGANDO BIBLIOTECAS BASICAS ***")
 import os
 import sys
 from pathlib import Path
@@ -7,10 +6,6 @@ import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-print ("*** CARREGADO ***")
-
-
-print ("*** CARREGANDO BIBLIOTECAS OLLAMA, OPENAI e RAGAS ***")
 ## bibliotecas Ollama, OpenAI e Ragas
 from ollama import Client
 
@@ -20,9 +15,6 @@ from ragas.llms import llm_factory
 
 ## ContextPrecision está em ragas.metrics.collections e não em ragas.metrics
 from ragas.metrics.collections import ContextPrecision
-
-print ("*** CARREGADAS BIBLIOTECAS OLLAMA, OPENAI e RAGAS ***")
-
 #
 # ocultar o servidor
 ollama_server = os.environ['OLLAMA_SERVER']
@@ -35,15 +27,8 @@ client = AsyncOpenAI(
 )
 #
 # llm = llm_factory("nemotron-3-nano:30b", provider="openai", client=client)
-#llm = llm_factory("cogito", provider="openai", client=client)
-# llm = llm_factory("gpt-oss", provider="openai", client=client)
-llm = llm_factory("nemotron-3-nano", provider="openai", client=client)
-
-
-print ("*** MODELO USADO NA AVALIAÇÃO ***")
+llm = llm_factory("gpt-oss", provider="openai", client=client)
 print ("modelo: ", llm.model)
-print ("***  ***")
-
 
 ### Create metric
 scorer = ContextPrecision(llm=llm)
@@ -56,24 +41,12 @@ print ("___ Scorer___")
 #### Evaluate
 #### Neste caso, o que é comparado são as tres frases "retrieved" contra a "reference" 
 
-input = "quanto gastei na padaria, lavanderia e restaurante??"
-reference = "padaria R$ 100, lavanderia R$ 50,  restaurante R$ 120"
-### a seguir, tres versoes de retrieved: a primeira frase errada, a ultima frase errada e tudo em uma frase, com um erro
-
-#retrieved = ["padaria gastou 10 reais",
-#            "lavanderia gastou R$ 50", 
-#            "restaurante gastou R$ 120.",
-#]
-
-retrieved = ["padaria gastou 100 reais",
-            "lavanderia gastou R$ 50", 
-            "restaurante gastou R$ 10.",
+input = "quanto gastei  em a, b e c?"
+reference = "a = 100, b = 50, c = 120"
+retrieved = ["a = 100", 
+"b = 50", 
+"c = 10.",
 ]
-
-# retrieved = ["padaria gastou 10 reais lavanderia gastou R$ 50 restaurante gastou R$ 120." ]
-
-
-
 
 print (" ") 
 print ("input: ", input)
