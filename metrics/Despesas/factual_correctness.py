@@ -1,3 +1,4 @@
+### Factual Correctness
 import os
 import sys
 from pathlib import Path
@@ -14,24 +15,21 @@ from openai import AsyncOpenAI
 from ragas.llms import llm_factory
 
 ## ContextPrecision está em ragas.metrics.collections e não em ragas.metrics
-from ragas.metrics.collections import ContextPrecision
+from ragas.metrics.collections import FactualCorrectness
 #
 # ocultar o servidor
 ollama_server = os.environ['OLLAMA_SERVER']
 host=f'http://{ollama_server}:11434/v1'
-#
 ## Setup LLM - aqui será o ajuste para Ollama models
 client = AsyncOpenAI(
     api_key="ollama",
     base_url=host
 )
 #
-# llm = llm_factory("nemotron-3-nano:30b", provider="openai", client=client)
 llm = llm_factory("gpt-oss", provider="openai", client=client)
-print ("modelo: ", llm.model)
-
+print (llm.model)
 ### Create metric
-scorer = ContextPrecision(llm=llm)
+scorer = FactualCorrectness(llm=llm)
 ###
 print ("___ Scorer___")
 print (scorer)
@@ -40,24 +38,20 @@ print ("___ Scorer___")
 ###
 #### Evaluate
 #### Neste caso, o que é comparado são as tres frases "retrieved" contra a "reference" 
-
-input = "quanto gastei  em a, b e c?"
-reference = "a = 100, b = 50, c = 120"
-retrieved = ["a = 100", 
-"b = 50", 
-"c = 10.",
-]
+#### A ordem importa. Então, como a terceira frase é igual a reference, o score é 0,333.
+### input = "quanto gastei na padaria, lavanderia e restaurante??"
+reference = "padaria R$ 100, lavanderia R$ 50,  restaurante R$ 120"
+retrieved = "padaria gastou 100 reais, lavanderia gastou R$ 50, restaurante gastou R$ 120, academia gastou R$ 200, loja gastou R$ 500."
 
 print (" ") 
 print ("input: ", input)
-print ("reference: ", reference)
+print ("response: ", reference)
 print ("retrieved contexts: ", retrieved)
 print (" ")
 #
 result = scorer.score(
-    user_input=input,
-    reference= reference,
-    retrieved_contexts=retrieved
-     
+    ### user_input=input,
+    response=reference,
+    reference=retrieved,
 )
-print(f"Context Precision Score: {result.value}")
+print(f"Factual Correctness Score: {result.value}")

@@ -60,15 +60,15 @@ input = "quanto gastei na padaria, lavanderia e restaurante??"
 reference = "padaria R$ 100, lavanderia R$ 50,  restaurante R$ 120"
 ### a seguir, tres versoes de retrieved: a primeira frase errada, a ultima frase errada e tudo em uma frase, com um erro
 
-#retrieved = ["padaria gastou 10 reais",
-#            "lavanderia gastou R$ 50", 
-#            "restaurante gastou R$ 120.",
-#]
-
-retrieved = ["padaria gastou 100 reais",
+retrieved = ["padaria gastou 10 reais",
             "lavanderia gastou R$ 50", 
-            "restaurante gastou R$ 10.",
+            "restaurante gastou R$ 120.",
 ]
+
+#retrieved = ["padaria gastou 100 reais",
+#            "lavanderia gastou R$ 50", 
+#            "restaurante gastou R$ 10.",
+#]
 
 # retrieved = ["padaria gastou 10 reais lavanderia gastou R$ 50 restaurante gastou R$ 120." ]
 
