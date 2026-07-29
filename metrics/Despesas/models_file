@@ -1,0 +1,9 @@
+[
+  {
+    "model": "cogito:latest"
+  },
+  {
+    "model": "gpt-oss:latest"
+  },
+  
+]

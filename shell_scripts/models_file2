@@ -1,0 +1,7 @@
+"model": "cogito:latest"
+"model": "gpt-oss:latest"
+"model": "deepseek-r1:latest"
+"model": "nemotron-3-nano:latest"
+"model": "nemotron-3-nano:30b"
+"model": "llama3.1:latest"
+"model": "qwen3.6:latest"
