@@ -1,0 +1,66 @@
+___ Modelo ___
+=== cogito:latest ===
+___ Scorer___
+ContextRecall(name='context_recall', allowed_values=(0.0, 1.0))
+______
+
+Which are the two more important cities of France?
+Nice and Paris
+['France is in Europe. Paris is its capital. Other important cities are Nice, Toulouse and Cannes.']
+___ Pontuação___
+Context Recall Score: 1.0
+______
+
+Where is the Eiffel Tower located?
+The Eiffel Tower is located in Paris.
+['Paris is the capital of France.']
+___ Pontuação___
+Context Recall Score: 1.0
+______
+
+O que é um cartão de crédito?
+Cartão de crédito é um instrumento de crédito pessoal.
+['Cartão de crédito é um instrumento de crédito pessoal.']
+___ Pontuação___
+Context Recall Score: 1.0
+______
+
+quanto gastei na padaria, lavanderia e restaurante??
+padaria R$ 100, lavanderia R$ 50,  restaurante R$ 120, cinema R$ 40
+['supermercado gastou R$250', 'padaria gastou 100 reais', 'lavanderia gastou R$ 50', 'restaurante gastou R$ 120.', 'academia gastou R$ 200.', 'loja gastou R$ 500.']
+___ Pontuação___
+Context Recall Score: 0.75
+______
+___ Modelo ___
+=== gpt-oss:latest ===
+___ Scorer___
+ContextRecall(name='context_recall', allowed_values=(0.0, 1.0))
+______
+
+Which are the two more important cities of France?
+Nice and Paris
+['France is in Europe. Paris is its capital. Other important cities are Nice, Toulouse and Cannes.']
+___ Pontuação___
+Context Recall Score: 1.0
+______
+
+Where is the Eiffel Tower located?
+The Eiffel Tower is located in Paris.
+['Paris is the capital of France.']
+___ Pontuação___
+Context Recall Score: 0.0
+______
+
+O que é um cartão de crédito?
+Cartão de crédito é um instrumento de crédito pessoal.
+['Cartão de crédito é um instrumento de crédito pessoal.']
+___ Pontuação___
+Context Recall Score: 1.0
+______
+
+quanto gastei na padaria, lavanderia e restaurante??
+padaria R$ 100, lavanderia R$ 50,  restaurante R$ 120, cinema R$ 40
+['supermercado gastou R$250', 'padaria gastou 100 reais', 'lavanderia gastou R$ 50', 'restaurante gastou R$ 120.', 'academia gastou R$ 200.', 'loja gastou R$ 500.']
+___ Pontuação___
+Context Recall Score: 0.75
+______

@@ -1,0 +1,17 @@
+[
+  {
+    "model": "cogito:latest"
+  },
+  {
+    "model": "gpt-oss:latest"
+  },
+  {
+    "model": "nemotron-3-nano:latest"
+  },
+  {
+    "model": "nemotron-3-nano:30b"
+  },
+  {
+    "model": "llama3.1:latest"
+  }
+]

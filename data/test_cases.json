@@ -1,0 +1,33 @@
+[
+  {
+    "user_input": "Which are the two more important cities of France?",
+    "reference": "Nice and Paris",
+    "retrieved_contexts": [
+      "France is in Europe. Paris is its capital. Other important cities are Nice, Toulouse and Cannes."
+    ]
+  },
+  {
+    "user_input": "Where is the Eiffel Tower located?",
+    "reference": "The Eiffel Tower is located in Paris.",
+    "retrieved_contexts": [
+      "Paris is the capital of France."
+    ]
+  },
+  {
+    "user_input": "O que é um cartão de crédito?",
+    "reference": "Cartão de crédito é um instrumento de crédito pessoal.",
+    "retrieved_contexts": [
+      "Cartão de crédito é um instrumento de crédito pessoal."
+    ]
+  },
+  
+  {"user_input": "quanto gastei na padaria, lavanderia e restaurante??",
+    "reference": "padaria R$ 100, lavanderia R$ 50,  restaurante R$ 120, cinema R$ 40",
+    "retrieved_contexts": ["supermercado gastou R$250",
+                "padaria gastou 100 reais",
+                "lavanderia gastou R$ 50", 
+                "restaurante gastou R$ 120.",
+                "academia gastou R$ 200.",
+                "loja gastou R$ 500."]
+  }
+]

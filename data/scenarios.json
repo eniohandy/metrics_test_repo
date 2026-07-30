@@ -1,0 +1,14 @@
+{
+"input": "quanto gastei na padaria, lavanderia e restaurante??",
+"reference": "padaria R$ 100, lavanderia R$ 50,  restaurante R$ 120, cinema R$ 40",
+"retrieved":
+	["supermercado gastou R$250",
+            "padaria gastou 100 reais",
+            "lavanderia gastou R$ 50", 
+            "restaurante gastou R$ 120.",
+            "academia gastou R$ 200.",
+            "loja gastou R$ 500."]
+
+
+
+}

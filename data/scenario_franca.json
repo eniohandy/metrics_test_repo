@@ -1,0 +1,9 @@
+[
+  {
+    "user_input": "Where is the Eiffel Tower located?",
+    "reference": "The Eiffel Tower is located in Paris.",
+    "retrieved_contexts": [
+      "Paris is the capital of France."
+    ]
+  }
+]
