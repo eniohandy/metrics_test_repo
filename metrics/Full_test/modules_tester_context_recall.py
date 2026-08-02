@@ -1,3 +1,5 @@
+### este fiz em casa, dia 1/8/26
+
 import os
 import sys
 import json
