@@ -7,3 +7,14 @@ Context Recall
 Faithfulness
 
 According to the RAGAS implementation.
+
+To use:
+```python
+python3 ./faithfulness_silent.py --models-file ../data/models_file4 --data-file ../data/scenarios4.json 
+```
+where the name of the script changes according to the measure
+in the data folder you need:
+- list of models to be tested and
+- scenarios
+
+Both files are in json format.
