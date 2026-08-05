@@ -15,8 +15,8 @@ To use:
 ```python
 python3 ./faithfulness_silent.py --models-file ../data/models_file4 --data-file ../data/scenarios4.json 
 ```
-where the name of the script changes according to the measure
-in the data folder you need:
+where the name "faithfulness" changes according to the measure you want.
+As input in the data folder you need:
 - list of models to be tested and
 - scenarios
 

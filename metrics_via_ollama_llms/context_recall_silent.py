@@ -31,17 +31,17 @@ client = AsyncOpenAI(
 
 #
 for model_name in model_names:
-    print ("_" * 10, "Modelo",  "_" * 10)
+    print ("\u2500" * 10, "Modelo",  "\u2500" * 10)
     print(f"----- {model_name} -----")
-    print ("_" * 28)
+    print ("\u2500" * 28)
     llm= llm_factory(model_name, provider="openai", client=client)
     ### Create metric
     scorer = ContextRecall(llm=llm)
     ###
     print ()
-    print ("_" * 17, "Scorer", "_" * 17)
+    print ("\u2500" * 17, "Scorer", "\u2500" * 17)
     print (scorer)
-    print ("_" * 40)
+    print ("\u2500" * 40)
     print ()
         
     for case in test_cases:
@@ -62,7 +62,7 @@ for model_name in model_names:
             )
 
             print ()
-            print ("_" * 15, "Pontuação", "_" * 15)
+            print ("\u2500" * 15, "Pontuação", "\u2500" * 15)
             print(f"Context Recall Score: {result.value}")
-            print ("_" * 40)
+            print ("\u2500" * 40)
             print ()

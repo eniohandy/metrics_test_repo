@@ -27,7 +27,7 @@ from data_loader import load_test_cases
 from dotenv import load_dotenv
 load_dotenv()
 
-# ── Args ──────────────────────────────────────────────────────────────────────
+# ── Args ────────────────────────────────────────────────────────────────────── ─
 parser = argparse.ArgumentParser()
 parser.add_argument("--models-file", type=str, required=True)
 parser.add_argument("--data-file",   type=str, required=True)
