@@ -1,0 +1,11 @@
+[
+  {
+    "model": "qwen/qwen3-235b-a22b-2507"
+  },
+  {
+    "model": "deepseek/deepseek-v4-flash"
+  },
+  {
+    "model": "z-ai/glm-4.7-flash"
+  }
+]
