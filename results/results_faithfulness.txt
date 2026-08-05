@@ -1,0 +1,85 @@
+___ Modelo ___
+=== granite4.1:8b ===
+___ Scorer___
+Faithfulness(name='faithfulness', allowed_values=(0.0, 1.0))
+______
+___ Pontuação___
+Faithfulness Score: 1.0
+______
+___ Pontuação___
+Faithfulness Score: 1.0
+______
+___ Pontuação___
+Faithfulness Score: 1.0
+______
+___ Pontuação___
+Faithfulness Score: 1.0
+______
+___ Modelo ___
+=== cogito:latest ===
+___ Scorer___
+Faithfulness(name='faithfulness', allowed_values=(0.0, 1.0))
+______
+___ Pontuação___
+Faithfulness Score: 1.0
+______
+___ Pontuação___
+Faithfulness Score: 1.0
+______
+___ Pontuação___
+Faithfulness Score: 1.0
+______
+___ Pontuação___
+Faithfulness Score: 0.75
+______
+___ Modelo ___
+=== gpt-oss:latest ===
+___ Scorer___
+Faithfulness(name='faithfulness', allowed_values=(0.0, 1.0))
+______
+___ Pontuação___
+Faithfulness Score: 0.0
+______
+___ Pontuação___
+Faithfulness Score: 0.0
+______
+___ Pontuação___
+Faithfulness Score: 1.0
+______
+___ Pontuação___
+Faithfulness Score: 0.75
+______
+___ Modelo ___
+=== nemotron-3-nano:latest ===
+___ Scorer___
+Faithfulness(name='faithfulness', allowed_values=(0.0, 1.0))
+______
+___ Pontuação___
+Faithfulness Score: 0.0
+______
+___ Pontuação___
+Faithfulness Score: 0.0
+______
+___ Pontuação___
+Faithfulness Score: 1.0
+______
+___ Pontuação___
+Faithfulness Score: 0.75
+______
+___ Modelo ___
+=== llama3.1:latest ===
+___ Scorer___
+Faithfulness(name='faithfulness', allowed_values=(0.0, 1.0))
+______
+___ Pontuação___
+Faithfulness Score: 0.0
+______
+___ Pontuação___
+Faithfulness Score: 0.5
+______
+___ Pontuação___
+Faithfulness Score: 1.0
+______
+___ Pontuação___
+Faithfulness Score: 0.75
+______

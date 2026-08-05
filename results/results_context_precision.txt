@@ -1,0 +1,85 @@
+___ Modelo ___
+=== granite4.1:8b ===
+___ Scorer___
+ContextPrecision(name='context_precision', allowed_values=(0.0, 1.0))
+______
+___ Pontuação___
+Context Recall Score: 0.9999999999
+______
+___ Pontuação___
+Context Recall Score: 0.9999999999
+______
+___ Pontuação___
+Context Recall Score: 0.9999999999
+______
+___ Pontuação___
+Context Recall Score: 0.0
+______
+___ Modelo ___
+=== cogito:latest ===
+___ Scorer___
+ContextPrecision(name='context_precision', allowed_values=(0.0, 1.0))
+______
+___ Pontuação___
+Context Recall Score: 0.9999999999
+______
+___ Pontuação___
+Context Recall Score: 0.9999999999
+______
+___ Pontuação___
+Context Recall Score: 0.9999999999
+______
+___ Pontuação___
+Context Recall Score: 0.0
+______
+___ Modelo ___
+=== gpt-oss:latest ===
+___ Scorer___
+ContextPrecision(name='context_precision', allowed_values=(0.0, 1.0))
+______
+___ Pontuação___
+Context Recall Score: 0.9999999999
+______
+___ Pontuação___
+Context Recall Score: 0.0
+______
+___ Pontuação___
+Context Recall Score: 0.9999999999
+______
+___ Pontuação___
+Context Recall Score: 0.6388888888675925
+______
+___ Modelo ___
+=== nemotron-3-nano:latest ===
+___ Scorer___
+ContextPrecision(name='context_precision', allowed_values=(0.0, 1.0))
+______
+___ Pontuação___
+Context Recall Score: 0.9999999999
+______
+___ Pontuação___
+Context Recall Score: 0.0
+______
+___ Pontuação___
+Context Recall Score: 0.9999999999
+______
+___ Pontuação___
+Context Recall Score: 0.4166666666458333
+______
+___ Modelo ___
+=== llama3.1:latest ===
+___ Scorer___
+ContextPrecision(name='context_precision', allowed_values=(0.0, 1.0))
+______
+___ Pontuação___
+Context Recall Score: 0.9999999999
+______
+___ Pontuação___
+Context Recall Score: 0.9999999999
+______
+___ Pontuação___
+Context Recall Score: 0.9999999999
+______
+___ Pontuação___
+Context Recall Score: 0.0
+______
