@@ -2,9 +2,12 @@
 This branch has the more consolidated scripts.
 
 They measure:
-Context Precision\n
-Context Recall\n
-Faithfulness\n
+
+Context Precision
+
+Context Recall
+
+Faithfulness
 
 According to the RAGAS implementation.
 
