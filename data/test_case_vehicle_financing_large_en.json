@@ -1,0 +1,20 @@
+[
+  {
+    "name": "case_vehicle_financing_large",
+    "problem_description": "5 claims in the reference. 5 contexts directly support each claim, 1 context contradicts a claim (insurance), 4 contexts are pure noise (off-topic). Interleaved order (relevant/noise) to test Context Precision's sensitivity to ranking.",
+    "user_input": "What are the conditions for vehicle financing at this bank?",
+    "reference": "Vehicle financing has a term of up to 60 months. The interest rate is 1.2% per month. A minimum down payment of 20% of the vehicle's value is required. Vehicle insurance is mandatory throughout the contract. Approval can be done entirely online.",
+    "retrieved_contexts": [
+      "Vehicle financing can be arranged with a repayment term of up to 60 months.",
+      "The bank was founded in 1985 and currently has more than 500 branches nationwide.",
+      "The interest rate for vehicle financing is 1.2% per month for checking account holders.",
+      "The weather forecast for the metropolitan area indicates a chance of rain in the coming days.",
+      "A minimum down payment of 20% of the vehicle's value is required for financing approval.",
+      "Vehicle insurance is optional and can be purchased separately, with no additional cost added to the financing.",
+      "Vehicle financing approval can be done entirely online through the bank's app.",
+      "The bank's credit card offers a points program and cashback on selected purchases.",
+      "Customers can simulate vehicle financing directly on the bank's website, with no commitment.",
+      "The savings account yields according to the reference rate plus 0.5% per month."
+    ]
+  }
+]

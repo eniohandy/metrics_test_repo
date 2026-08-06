@@ -1,0 +1,47 @@
+[
+  {
+    "nome": "caso_cartao_correto",
+    "descricao_problema": "Nenhum. Cenário de controle — contexto cobre bem o reference, sem ruído.",
+    "user_input": "O que é um cartão de crédito e como funciona o pagamento?",
+    "reference": "Cartão de crédito é um instrumento de crédito pessoal. O pagamento da fatura deve ser feito até a data de vencimento para evitar cobrança de juros.",
+    "retrieved_contexts": [
+      "Cartão de crédito é um instrumento de crédito pessoal emitido por bancos e instituições financeiras.",
+      "O titular do cartão deve pagar a fatura até a data de vencimento para evitar a cobrança de juros rotativos.",
+      "Cartões de crédito costumam oferecer benefícios como programas de pontos e cashback."
+    ]
+  },
+  {
+    "nome": "caso_emprestimo_contexto_incompleto",
+    "descricao_problema": "Context Recall baixo. O reference cita taxa de juros e prazo, mas o retrieved_contexts só cobre o prazo — falta a informação sobre a taxa.",
+    "user_input": "Quais são as condições de um empréstimo pessoal neste banco?",
+    "reference": "O empréstimo pessoal tem prazo de até 48 meses e taxa de juros a partir de 2,5% ao mês, com aprovação em até 24 horas.",
+    "retrieved_contexts": [
+      "O empréstimo pessoal pode ser contratado com prazo de pagamento de até 48 meses.",
+      "A aprovação do empréstimo pessoal costuma ocorrer em até 24 horas após o envio dos documentos.",
+      "O valor liberado depende da análise de crédito do cliente."
+    ]
+  },
+  {
+    "nome": "caso_banco_reference_diverge_contexto",
+    "descricao_problema": "Context Recall/consistência baixa. O reference afirma um horário de atendimento que contradiz o que está no retrieved_contexts (10h-16h vs 9h-18h no contexto).",
+    "user_input": "Qual o horário de atendimento das agências do banco?",
+    "reference": "As agências do banco funcionam de segunda a sexta, das 10h às 16h.",
+    "retrieved_contexts": [
+      "As agências do banco funcionam de segunda a sexta-feira, das 9h às 18h.",
+      "Aos sábados, algumas agências abrem em horário reduzido, das 9h às 13h.",
+      "O atendimento digital pelo aplicativo está disponível 24 horas por dia."
+    ]
+  },
+  {
+    "nome": "caso_cartao_ruido_contexto",
+    "descricao_problema": "Context Precision baixo. Os retrieved_contexts misturam trechos relevantes com trechos irrelevantes/fora do assunto (ruído).",
+    "user_input": "Como faço para aumentar o limite do meu cartão de crédito?",
+    "reference": "O aumento de limite do cartão de crédito pode ser solicitado pelo aplicativo do banco, com análise baseada no histórico de pagamento do cliente.",
+    "retrieved_contexts": [
+      "O aumento de limite do cartão de crédito pode ser solicitado diretamente pelo aplicativo do banco.",
+      "A análise para aumento de limite considera o histórico de pagamento e o relacionamento do cliente com o banco.",
+      "O banco foi fundado em 1985 e possui mais de 500 agências no país.",
+      "A previsão do tempo para a região metropolitana indica possibilidade de chuva nos próximos dias."
+    ]
+  }
+]

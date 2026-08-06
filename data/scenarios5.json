@@ -1,0 +1,7 @@
+[
+  {
+    "user_input":"me conte sobre os skills que agora fazem parte das LLMs",
+    "reference": "Skills são pastas com instruções, scripts e recursos que o Claude carrega dinamicamente quando são relevantes para uma tarefa, em vez de precisar receber as mesmas explicações repetidas em cada conversa. Cada skill é organizada em torno de um arquivo SKILL.md, que contém as instruções e metadados que o Claude consulta, sendo pastas de instruções, scripts e recursos que o Claude carrega dinamicamente para melhorar o desempenho em tarefas especializadas, ensinando o Claude a completar tarefas específicas de forma repetível — seja criando documentos seguindo as diretrizes de marca de uma empresa, analisando dados conforme os fluxos de trabalho da organização, ou automatizando tarefas pessoais.",
+    "retrieved_contexts": ["Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific workflows, or automating personal tasks."]
+  }
+]

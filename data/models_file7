@@ -4,8 +4,5 @@
   },
   {
     "model": "deepseek/deepseek-v4-flash"
-  },
-  {
-    "model": "z-ai/glm-4.7-flash"
   }
 ]

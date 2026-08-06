@@ -1,7 +1,8 @@
+[
 {
-"input": "quanto gastei na padaria, lavanderia e restaurante??",
+"user_input": "quanto gastei na padaria, lavanderia e restaurante??",
 "reference": "padaria R$ 100, lavanderia R$ 50,  restaurante R$ 120, cinema R$ 40",
-"retrieved":
+"retrieved_contexts":
 	["supermercado gastou R$250",
             "padaria gastou 100 reais",
             "lavanderia gastou R$ 50", 
@@ -12,3 +13,4 @@
 
 
 }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "nome": "caso_financiamento_veiculo_grande",
+    "descricao_problema": "5 claims no reference. 5 contextos dão suporte direto (um por claim), 1 contexto contradiz uma claim (seguro), 4 contextos são ruído puro (fora do assunto). Ordem intercalada (relevante/ruído) para testar sensibilidade a ranking do Context Precision.",
+    "user_input": "Quais são as condições do financiamento de veículo deste banco?",
+    "reference": "O financiamento de veículo tem prazo de até 60 meses. A taxa de juros é de 1,2% ao mês. É exigida uma entrada mínima de 20% do valor do veículo. O seguro do veículo é obrigatório durante todo o contrato. A aprovação pode ser feita totalmente online.",
+    "retrieved_contexts": [
+      "O financiamento de veículo pode ser contratado com prazo de pagamento de até 60 meses.",
+      "O banco foi fundado em 1985 e atualmente possui mais de 500 agências no país.",
+      "A taxa de juros do financiamento de veículo é de 1,2% ao mês para clientes correntistas.",
+      "A previsão do tempo para a região metropolitana indica possibilidade de chuva nos próximos dias.",
+      "É exigida uma entrada mínima de 20% do valor do veículo para aprovação do financiamento.",
+      "O seguro do veículo é opcional e pode ser contratado separadamente, sem custo adicional no financiamento.",
+      "A aprovação do financiamento de veículo pode ser feita totalmente online, pelo aplicativo do banco.",
+      "O cartão de crédito do banco oferece programa de pontos e cashback em compras selecionadas.",
+      "Clientes podem simular o financiamento de veículo diretamente no site do banco, sem compromisso.",
+      "A conta poupança do banco rende de acordo com a taxa referencial mais 0,5% ao mês."
+    ]
+  }
+]
