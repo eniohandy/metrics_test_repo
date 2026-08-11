@@ -1,0 +1,47 @@
+[
+  {
+    "name": "case_credit_card_correct",
+    "problem_description": "None. Control scenario — context covers the reference well, no noise.",
+    "user_input": "What is a credit card and how does payment work?",
+    "reference": "A credit card is a personal credit instrument. The bill must be paid by the due date to avoid interest charges.",
+    "retrieved_contexts": [
+      "A credit card is a personal credit instrument issued by banks and financial institutions.",
+      "The cardholder must pay the bill by the due date to avoid revolving interest charges.",
+      "Credit cards often offer benefits such as points programs and cashback."
+    ]
+  },
+  {
+    "name": "case_loan_incomplete_context",
+    "problem_description": "Low Context Recall. The reference mentions both interest rate and term, but retrieved_contexts only covers the term — the interest rate is missing.",
+    "user_input": "What are the conditions for a personal loan at this bank?",
+    "reference": "The personal loan has a term of up to 48 months and an interest rate starting at 2.5% per month, with approval within 24 hours.",
+    "retrieved_contexts": [
+      "A personal loan can be arranged with a repayment term of up to 48 months.",
+      "Personal loan approval usually happens within 24 hours after documents are submitted.",
+      "The amount released depends on the customer's credit analysis."
+    ]
+  },
+  {
+    "name": "case_bank_reference_diverges_from_context",
+    "problem_description": "Low Context Recall/consistency. The reference states a business-hours claim that contradicts the retrieved_contexts (10am-4pm vs 9am-6pm in the context).",
+    "user_input": "What are the business hours of the bank's branches?",
+    "reference": "The bank's branches are open Monday to Friday, from 10am to 4pm.",
+    "retrieved_contexts": [
+      "The bank's branches are open Monday to Friday, from 9am to 6pm.",
+      "On Saturdays, some branches open for reduced hours, from 9am to 1pm.",
+      "Digital support through the app is available 24 hours a day."
+    ]
+  },
+  {
+    "name": "case_credit_card_noisy_context",
+    "problem_description": "Low Context Precision. Retrieved_contexts mix relevant passages with irrelevant/off-topic ones (noise).",
+    "user_input": "How do I increase the limit on my credit card?",
+    "reference": "A credit card limit increase can be requested through the bank's app, based on the customer's payment history.",
+    "retrieved_contexts": [
+      "A credit card limit increase can be requested directly through the bank's app.",
+      "The analysis for a limit increase considers the customer's payment history and relationship with the bank.",
+      "The bank was founded in 1985 and has more than 500 branches nationwide.",
+      "The weather forecast for the metropolitan area indicates a chance of rain in the coming days."
+    ]
+  }
+]
