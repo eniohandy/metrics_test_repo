@@ -51,3 +51,5 @@ llama3.1:latest
 gpt-oss:latest      
 deepseek-r1:latest  
 llama3.1:70b        
+
+### novos modelos
