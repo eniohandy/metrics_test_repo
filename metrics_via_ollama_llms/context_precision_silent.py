@@ -34,7 +34,7 @@ for model_name in model_names:
     print ("\u2500" * 10, "Modelo",  "\u2500" * 10)
     print(f"----- {model_name} -----")
     print ("\u2500" * 28)
-    llm= llm_factory(model_name, provider="openai", client=client)
+    llm= llm_factory(model_name, provider="openai", client=client, max_tokens=8192)
     ### Create metric
     scorer = ContextPrecision(llm=llm)
     ###
