@@ -6,12 +6,12 @@
     "model": "cogito:latest"
   },
   {
+    "model": "llama3.1:latest"
+  },
+  {
     "model": "gpt-oss:latest"
   },
   {
     "model": "nemotron-3-nano:latest"
-  },
-  {
-    "model": "llama3.1:latest"
   }
 ]
