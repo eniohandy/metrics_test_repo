@@ -3,6 +3,8 @@ curl -N http://200.144.192.87:11434/v1/chat/completions \
   -d '{
   "model": "llama3.1",
   "messages": [
-    {"role": "user", "content": "Hello"}
-  ]
+    {"role": "user", "content": "quantos dias de férias eu tenho direito?"}
+  ],
+  "temperature": 0.0,
+  "seed": 17
 }'
