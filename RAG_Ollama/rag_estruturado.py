@@ -1,0 +1,70 @@
+# Importacoes
+import numpy as np
+import requests
+import os
+
+# Variables
+ollama_server = os.environ['OLLAMA_SERVER']
+
+# Functions
+
+## codifica em embeddings
+def get_embeddings(texts):
+    if isinstance(texts, str):
+        texts = [texts]
+    response = requests.post(
+        f"{ollama_server}:11434/api/embed",
+        json={"model": "nomic-embed-text", "input": texts},
+    )
+    return response.json()["embeddings"]
+
+## calcula a similaridade usando a função de cossenos
+def cosine_similarity(a, b):
+    return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
+
+## recupera os embeddings mais proximos
+
+def retrieve(query, document_embeddings, top_n=2):
+    response = requests.post(
+        "http://ollama_server/api/embed",
+        headers={
+            "Content-Type": "application/json",
+        },
+        json={"model": "nomic-embed-text", "input": query},
+    )
+
+## gera resposta
+def generate_answer(query, context_docs):
+    context = "\n\n".join(
+        f"[{i+1}] {doc['text']}" for i, doc in enumerate(context_docs)
+    )
+
+# PARTE I
+## Chunks de texto
+chunks = [
+"Abaixo está a lista de benefícios oferecidos aos colaboradores da Riachuelo, conforme as informações oficiais do portal de carreiras da empresa:",
+"1. Refeição Descrição: Os colaboradores contam com alimentação de qualidade em restaurantes internos. Para quem está em trabalho remoto, é oferecido um auxílio que pode ser utilizado em restaurantes e supermercados. Nas lojas, todos recebem vale-alimentação ou vale-refeição.",
+"2. Auxílio trabalho remoto e VT (Vale Transporte) Descrição: Colaboradores em regime de trabalho remoto recebem um auxílio mensal para apoiar nas despesas de energia elétrica e internet. Adicionalmente, é oferecido vale-transporte para todos os colaboradores, de acordo com o desejo de cada um.",
+"3. Previdência Privada Descrição: Plano de Previdência Privada com o intuito de apoiar os colaboradores no investimento mensal pensando no longo prazo e no futuro em todas as etapas da vida.",
+"4. Cartão Flex Descrição: Um cartão para apoiar as despesas do mês, que dá acesso a estabelecimentos como farmácias, postos de combustíveis e supermercados, com o valor gasto sendo descontado na folha de pagamento.",
+"5. Desconto na Riachuelo Descrição: Descontos especiais em compras realizadas nas lojas físicas, site e aplicativo utilizando o Cartão Riachuelo. Os descontos podem ser ainda maiores dependendo da campanha do mês, como Natal, Dia das Mães e Black Friday.",
+"6. Assistência Médica e Odontológica Descrição: Planos abrangentes de assistência médica e odontológica com rede credenciada de qualidade em todo o país para cuidar da saúde do colaborador e de seus familiares.",
+"7. Foco em saúde e bem-estar Descrição: Programas de saúde e qualidade de vida que incluem campanhas de vacinação, acompanhamento de doenças crônicas, programas para gestantes, psicólogos online, descontos em medicamentos, entre outros.",
+"8. Desenvolvimento e cultura Descrição: Parcerias com instituições de ensino e escolas de idiomas que oferecem descontos especiais em cursos de graduação, especialização, MBA e idiomas, além de descontos em shows, exposições e teatros.",
+"9. Gympass Descrição: Parceria que oferece acesso ilimitado às melhores academias, estúdios, aulas, treinos e aplicativos de bem-estar em um único benefício para incentivar os cuidados com a saúde física e mental.",
+]
+
+embeddings = get_embeddings(chunks)
+document_embeddings = [
+    {"text": chunks[i], "embedding": embeddings[i]}
+    for i in range(len(chunks))
+]
+
+data = response.json()
+document_embeddings = [
+    {"text": chunks[item["index"]], "embedding": item["embedding"]}
+    for item in data["data"]
+]
+
+print(f"Indexados {len(document_embeddings)} chunks, cada um com {len(document_embeddings[0]['embedding'])} dimensões")
+
