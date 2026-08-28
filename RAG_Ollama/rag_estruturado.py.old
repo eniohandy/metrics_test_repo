@@ -42,13 +42,35 @@ def retrieve(query, document_embeddings, top_n=2):
     scored.sort(key=lambda x: x["score"], reverse=True)
     return scored[:top_n]
 
-
-
 ## gera resposta
 def generate_answer(query, context_docs):
     context = "\n\n".join(
         f"[{i+1}] {doc['text']}" for i, doc in enumerate(context_docs)
     )
+
+    response = requests.post(
+        f"http://{ollama_server}:11434/v1/chat/completions",
+        headers={"Content-Type": "application/json"},
+        json={
+            "model": "llama3.1",
+            "temperature": 0.2,
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "Responda a pergunta do usuário com base apenas no contexto fornecido. Cite o número da fonte entre colchetes.",
+                },
+                {
+                    "role": "user",
+                    "content": f"Contexto:\n{context}\n\nPergunta: {query}",
+                },
+            ],
+        },
+    )
+
+    return response.json()["choices"][0]["message"]["content"]
+
+
+
 
 # PARTE I
 ## Chunks de texto
@@ -76,11 +98,20 @@ print(f"Indexados {len(document_embeddings)} chunks, cada um com {len(document_e
 
 # PARTE III
 ## Execução: buscar os chunks mais relevantes pra pergunta
+## compara a pergunta com os chunks disponíveis
 
 query = "quem tem direito à vale alimentação e refeição?"
-results = retrieve(query, document_embeddings, top_n=2)
+results = retrieve(query, document_embeddings, top_n=3)
 
 print("\nDocumentos recuperados:")
 for i, r in enumerate(results):
     print(f"  {i+1}. (score: {r['score']:.4f}) {r['text']}")
 
+# PARTE IV
+
+answer = generate_answer(query, results)
+print(f"\nPergunta: {query}")
+print(f"Resposta: {answer}")
+
+### tamanho do embedding
+# print(len(document_embeddings[0]["embedding"]))
