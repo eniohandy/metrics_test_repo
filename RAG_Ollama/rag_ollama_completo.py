@@ -6,7 +6,7 @@ import os
 # CONFIGURAÇÃO
 # ============================================================
 
-ollama_server = os.environ["OLLAMA_SERVER2"]
+ollama_server = os.environ["OLLAMA_SERVER"]
 OLLAMA_HOST = f"http://{ollama_server}:11434"
 OLLAMA_EMBED_MODEL = "qwen3-embedding:0.6b"
 OLLAMA_CHAT_MODEL = "llama3.1:latest"
