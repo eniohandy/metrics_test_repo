@@ -1,6 +1,6 @@
-curl -N http://200.144.192.67:3000/api/chat/completions \
+curl -N http://$OLLAMA_SERVER2:3000/api/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer sk-cbca990e6da14666ab7f2291d2fd1669" \
+  -H "Authorization: Bearer $WEBUI_API_KEY" \
   -d '{
     "model": "gemma4:latest",
     "messages": [

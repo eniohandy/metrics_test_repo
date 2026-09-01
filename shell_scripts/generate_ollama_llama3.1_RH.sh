@@ -1,4 +1,4 @@
-curl -N http://200.144.192.87:3000/api/chat/completions \
+curl -N http://$OLLAMA_SERVER:3000/api/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer sk-f8d0da7fe28d4477bd8bef2ec4ae5db2" \
   -d '{
