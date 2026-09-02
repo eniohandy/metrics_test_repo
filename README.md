@@ -53,3 +53,27 @@ deepseek-r1:latest
 llama3.1:70b        
 
 ### novos modelos
+
+
+###
+Árvore de diretórios
+
+.
+├── basic/                 # 
+├── metrics/               # 
+├── data/              # 
+├── metrics_via_ollama/                  # 
+├── /                # 
+├──             # 
+├──                # 
+├── README.md             # 
+└──       # 
+
+
+|
+|
+|
+
+
+
+
