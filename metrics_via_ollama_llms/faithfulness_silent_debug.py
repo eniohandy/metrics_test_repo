@@ -12,7 +12,12 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 from imports import *
 
 ## Faithfulness está em ragas.metrics.collections e não em ragas.metrics
-from ragas.metrics.collections import Faithfulness 
+from ragas.metrics.collections import Faithfulness
+
+# habilita log de debug para ver as claims/statements geradas e os veredictos NLI
+import logging
+logging.basicConfig(level=logging.DEBUG)
+logging.getLogger("httpx").setLevel(logging.WARNING)   # evita poluir o log com requisições HTTP cruas
 
 # nomes dos modelos a serem testados; casos de teste
 # arquivos em formato json
@@ -43,18 +48,8 @@ for model_name in model_names:
     print (scorer)
     print ("\u2500" * 40)
     print ()
-        
-    for case in test_cases:
-            user_input=case["user_input"],
-            reference=case["reference"],
-            retrieved_contexts=case["retrieved_contexts"],
-            # print(case['user_input']) ### só pra ver se estava funcionando
-            # print(user_input) ### idem
-            #print ()
-            #print(case['user_input'])
-            #print(case['reference'])
-            #print(case['retrieved_contexts'])
 
+    for case in test_cases:
             result = scorer.score(
                 user_input=case['user_input'],
                 response=case['reference'],
@@ -63,6 +58,6 @@ for model_name in model_names:
 
             print ()
             print ("\u2500" * 15, "Pontuação", "\u2500" * 15)
-            print(f"Context Precision Score: {result.value}")
+            print(f"Faithfulness Score: {result.value}")
             print ("\u2500" * 40)
             print ()
